@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<!--그냥 쓰면 별 의미 없기 때문에, 파라미터값을 같이 전달할 때 사용하는게 좋음-->
+    <h1>Thymeleaf 링크처리 예제 페이지</h1>
+    <div>
+        <a th:href="@{/thymeleaf/ex01}">예제1 페이지 이동</a>
+    </div>
+    <div>
+        <a href="/thymeleaf/ex02">예제2 페이지 이동</a>
+    </div>
+    <div>
+        <a href="https://www.naver.com/">네이버 페이지 이동</a>
+    </div>
+    <div>
+        <a th:href="@{https://www.thymeleaf.org/}">Thymeleaf 공식 페이지 이동</a>
+    </div>
+
+
+<!--파라미터 데이터 전달-->
+<div>
+    <a th:href="@{/thymeleaf/ex06(param1 = '파라미터 데이터1',
+    param2 = '파라미터 데이터2')}">thymeleaf 파라미터 전달</a>
+</div>
+
+</body>
+</html>
