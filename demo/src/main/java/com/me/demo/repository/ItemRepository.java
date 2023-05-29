@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 // JpaRepository는 2개의 제너릭 타입을 사용
-// 첫번째에는 '엔티티 타입 클래스', '두번째는 기본키 타입'을 넣어준다
+// 첫번째에는 '엔티티 클래스의 타입', '두번째는 기본키 타입'을 넣어준다
 public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item> {
 
     // item 이름으로 조회 (select) 키워드 변수명

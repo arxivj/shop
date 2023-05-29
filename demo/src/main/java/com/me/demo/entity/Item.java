@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Item {
+public class Item extends BaseEntity{
 
         @Id // 테이블의 기본키에 사용할 속성을 지정
         @Column(name="item_id")
@@ -36,9 +36,5 @@ public class Item {
 
         @Enumerated(EnumType.STRING) //enum 타입 매핑
         private ItemSellStatus itemSellStatus;
-
-        private LocalDateTime regTime;
-
-        private LocalDateTime updateTime;
 
 }
